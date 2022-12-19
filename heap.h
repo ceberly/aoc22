@@ -4,11 +4,18 @@
 #include <stdlib.h>
 
 typedef struct {
-  int *store;
+  void *item;
+  unsigned int key; // for comparison, ie the "priority" or whatever is needed.
+} heap_entry_t;
+
+typedef struct {
+  heap_entry_t **store;
   size_t capacity;
   size_t heap_size;
-} int_heap_t;
+} heap_t;
 
-int_heap_t new_int_heap(size_t capacity);
+heap_t new_heap(size_t capacity);
+void heap_insert(heap_t *, heap_entry_t *);
+heap_entry_t *heap_pop();
 
 #endif

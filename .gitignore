@@ -1,2 +1,4 @@
 *.swp
 aoc
+test_heap
+*.dSYM

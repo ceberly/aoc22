@@ -24,7 +24,7 @@ static unsigned next_sum(char **buffer, const char *buffer_end) {
       if (running_number > 0) {
         running_sum += running_number;
         running_number = 0;
-        
+
         goto next;
       }
 
@@ -36,7 +36,7 @@ static unsigned next_sum(char **buffer, const char *buffer_end) {
     fprintf(stderr, "Unexpected input character '%c'.\n", c);
     return 0;
 
-next:
+  next:
     (*buffer)++;
   }
 
@@ -64,9 +64,11 @@ static int compare(const void *a, const void *b) {
   c = *(int *)a;
   d = *(int *)b;
 
-  if (c == d) return 0;
-  if (c > d) return -1;
-  
+  if (c == d)
+    return 0;
+  if (c > d)
+    return -1;
+
   return 1;
 }
 
@@ -75,7 +77,7 @@ static void part2(char_buf_t input) {
   char *buf_end = bufp + input.len;
 
   unsigned curr_sum = 0;
-  
+
   size_t sums_count = 0;
   size_t sums_capacity = 1000;
 

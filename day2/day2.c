@@ -4,31 +4,31 @@
 #include "../aoc.h"
 
 static int part1_possible_games[] = {
-  3 + 0, // rock - scissors
-  2 + 6, // rock - paper
-  1 + 3, // rock - rock
+    3 + 0, // rock - scissors
+    2 + 6, // rock - paper
+    1 + 3, // rock - rock
 
-  3 + 6, // paper - scissors
-  2 + 3, // paper - paper
-  1 + 0, // paper - rock
+    3 + 6, // paper - scissors
+    2 + 3, // paper - paper
+    1 + 0, // paper - rock
 
-  3 + 3, // scissors - scissors
-  2 + 0, // scissors - paper 
-  1 + 6, // scissors - rock 
+    3 + 3, // scissors - scissors
+    2 + 0, // scissors - paper
+    1 + 6, // scissors - rock
 };
 
 static int part2_possible_games[] = {
-  2 + 6, // rock - Z
-  1 + 3, // rock - Y
-  3 + 0, // rock - X
+    2 + 6, // rock - Z
+    1 + 3, // rock - Y
+    3 + 0, // rock - X
 
-  3 + 6, // paper - Z
-  2 + 3, // paper - Y
-  1 + 0, // paper - X
+    3 + 6, // paper - Z
+    2 + 3, // paper - Y
+    1 + 0, // paper - X
 
-  1 + 6, // scissors - Z
-  3 + 3, // scissors - Y
-  2 + 0, // scissors - X
+    1 + 6, // scissors - Z
+    3 + 3, // scissors - Y
+    2 + 0, // scissors - X
 };
 
 void part1(char_buf_t input) {

@@ -1,7 +1,7 @@
 #include <assert.h>
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 // ifdef linux, windows etc...
 #include <fcntl.h>
@@ -13,8 +13,8 @@
 
 char_buf_t memory_map_file(const char *filename) {
   char_buf_t result = {
-    .buf = NULL,
-    .len = 0,
+      .buf = NULL,
+      .len = 0,
   };
 
   int fd = open(filename, O_RDONLY);
@@ -31,7 +31,7 @@ char_buf_t memory_map_file(const char *filename) {
   assert(sb.st_size >= 0);
   size_t len = (size_t)sb.st_size;
 
-  void *map = mmap(NULL, len, PROT_READ, MAP_PRIVATE, fd, 0); 
+  void *map = mmap(NULL, len, PROT_READ, MAP_PRIVATE, fd, 0);
   assert(map != NULL);
 
   result.buf = map;
